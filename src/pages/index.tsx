@@ -26,7 +26,7 @@ const PentagramSpinner = () => {
 	return (
 		<div className="flex items-center justify-center w-full h-full">
 			<div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-emerald-500">
-				{/* star svg */}
+				{/* star svg lmaooo */}
 				<svg className="w-32 h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 					<path fillRule="evenodd" d="M10 3l3.536 6.464 6.928.536L14.464 16 17 22.464 10 19.928 3 22.464 5.536 16 0 7.464l6.928-.536L10 3z" clipRule="evenodd" />
 				</svg>
