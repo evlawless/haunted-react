@@ -52,10 +52,10 @@ const Home: NextPage = () => {
 					</h1>
 					<PentagramSpinner />
 					<div className=" w-full flex place-content-around h-full">
-						<TarotLink alt="tools" img="/assets/tools.jpg" title="FIRST PAGE" />
-						<TarotLink alt="" img="/assets/tools.jpg" title="SECOND PAGE" />
-						<TarotLink alt="" img="/assets/tools.jpg" title="THIRD PAGE" />
-						<TarotLink alt="" img="/assets/tools.jpg" title="FOURTH PAGE" />
+						<TarotLink alt="tools" img="/assets/city.jpg" title="FIRST PAGE" />
+						<TarotLink alt="" img="/assets/forks.jpg" title="SECOND PAGE" />
+						<TarotLink alt="" img="/assets/pier.jpg" title="THIRD PAGE" />
+						<TarotLink alt="" img="/assets/trees.jpg" title="FOURTH PAGE" />
 						<TarotLink alt="" img="/assets/tools.jpg" title="FIFTH PAGE" />
 					</div>
 					{/* <p className="text-2xl text-rose-100">
