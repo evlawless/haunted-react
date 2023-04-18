@@ -3,8 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import { dark } from "@clerk/themes";
-
 import { useAuth, SignedIn, SignedOut, SignIn, SignOutButton } from "@clerk/nextjs";
 
 import { motion } from "framer-motion";
@@ -15,7 +13,7 @@ import { useState } from "react";
 const TarotLink = ({ title, img, alt, onClick, href = "#" }: { title: string, img: string, alt: string, onClick?: () => void, href?: string }) => {
 	return (
 		<Link href={href} className="hover:animate-pulse" onClick={onClick}>
-			<div className="w-36 h-72 p-1 bg-amber-100 hover:shadow-xl hover:shadow-emerald-500">
+			<div className="w-40 h-72 p-1 bg-amber-100 hover:shadow-xl hover:shadow-emerald-500">
 				<div className="flex flex-col-reverse border border-black w-full h-full bg-gradient-to-br from-emerald-950 to-slate-950">
 					<div className="w-full h-8 flex justify-center bg-amber-100 font-tarot text-xl">
 						{title}
@@ -29,43 +27,6 @@ const TarotLink = ({ title, img, alt, onClick, href = "#" }: { title: string, im
 	)
 }
 
-const PactTarotLink = () => {
-	const [focus, setFocus] = useState(false);
-
-	return (
-		<motion.div layout>
-			{
-				focus ?
-					(<div className="bg-gradient-to-r from-teal-600 to-purple-950">
-						<SignedIn>
-							<div>
-								<SignOutButton />
-							</div>
-						</SignedIn>
-						<SignedOut>
-							<SignIn
-								appearance={{
-									baseTheme: dark
-								}}
-							/>
-						</SignedOut>
-					</div>) :
-					<TarotLink title="SELL your SOUL" img="/assets/tools.jpg" alt="A Dark Pact (login)" onClick={() => { setFocus((f) => !f) }} />
-			}
-		</motion.div>
-	)
-}
-
-const PentagramSpinner = () => {
-	return (
-		<div className="flex items-center justify-center w-full h-full">
-			<div className="animate-ping rounded-full h-32 w-32 border-t-2 border-b-2 border-emerald-500 flex items-center justify-center">
-				{/* star svg lmaooo */}
-				<Image src="/assets/pentagram.svg" width={100} height={100} alt="pentagram" />
-			</div>
-		</div>
-	)
-}
 
 
 const Home: NextPage = () => {
@@ -88,7 +49,7 @@ const Home: NextPage = () => {
 					<div className=" w-full flex place-content-around h-full">
 						<TarotLink alt="tools" img="/assets/city.jpg" title="FIRST PAGE" />
 						<TarotLink alt="" img="/assets/forks.jpg" title="SECOND PAGE" />
-						<PactTarotLink />
+						<TarotLink alt="A Dark Pact (login)" title="SELL your SOUL" href="/pact" img="/assets/pier.jpg"/>
 						<TarotLink alt="" img="/assets/trees.jpg" title="FOURTH PAGE" />
 						<TarotLink alt="" img="/assets/tools.jpg" title="ONE of GHOST" />
 					</div>
